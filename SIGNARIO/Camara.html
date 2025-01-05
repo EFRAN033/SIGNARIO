@@ -9,6 +9,8 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            height: 100%;
+            overflow-x: hidden;
         }
 
         .header {
@@ -29,6 +31,8 @@
             font-size: 16px;
             color: #333;
             font-weight: bold;
+            min-height: calc(100vh - 130px);
+            box-sizing: border-box;
         }
 
         .main-container {
@@ -58,17 +62,18 @@
         }
 
         .detector-box {
-            width: 35%;
+            width: 30%;
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 10px;
+            transform: translateX(-50px);
         }
 
         .detector-content {
-            width: 80%;
-            height: 60vh;
-            max-height: 600px;
+            width: 75%;
+            height: 50vh;
+            max-height: 450px;
             border: 1px solid #ccc;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -76,8 +81,8 @@
         }
 
         .detector-button {
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: 8px 16px;
+            font-size: 14px;
             background-color: #D9EAF5;
             border: none;
             border-radius: 5px;
@@ -88,12 +93,86 @@
         .detector-button:hover {
             background-color: #b8d6f0;
         }
+
+        .footer {
+            width: 100%;
+            height: 130px;
+            background-color: #C5DEF6;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .social-icons-container {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            bottom: 20px;
+            left: 30px;
+        }
+
+        .social-icons {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .social-icons .line {
+            width: 100%;
+            height: 1px;
+            background-color: #A0BCCF;
+            margin-bottom: 10px;
+        }
+
+        .social-icons-icons {
+            display: flex;
+            flex-direction: row;
+            gap: 18px;
+        }
+
+        .social-icons-icons img {
+            width: 16px;
+            height: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons-icons img:hover {
+            transform: scale(1.2);
+        }
+
+        .vertical-line {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-left: 20px;
+            height: 100px;
+            position: relative;
+        }
+
+        .vertical-line::before {
+            content: "";
+            width: 1px;
+            height: 100%;
+            background-color: #A0BCCF;
+            position: absolute;
+        }
+
+        .vertical-line .circle {
+            width: 10px;
+            height: 10px;
+            background-color: #A0BCCF;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
     </style>
 </head>
 <body>
-    <div class="header">
-        SIGNARIO
-    </div>
+    <div class="header">SIGNARIO</div>
     <div class="content">
         <p>CÁMARA EN VIVO</p>
         <div class="main-container">
@@ -103,6 +182,22 @@
             <div class="detector-box">
                 <div class="detector-content"></div>
                 <button class="detector-button">LIMPIAR</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="social-icons-container">
+            <div class="social-icons">
+                <div class="line"></div>
+                <div class="social-icons-icons">
+                    <img src="images/facebook.png" alt="Facebook">
+                    <img src="images/instagram.png" alt="Instagram">
+                    <img src="images/linkedin.png" alt="LinkedIn">
+                    <img src="images/twitter.png" alt="Twitter">
+                </div>
+            </div>
+            <div class="vertical-line">
+                <div class="circle"></div>
             </div>
         </div>
     </div>
