@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cámara</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        .header {
+            background-color: #D9EAF5;
+            width: 100%;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: #000;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu {
+            display: flex;
+            gap: 40px;
+            font-family: Arial, sans-serif;
+            font-size: 15px; /* Tamaño ajustado */
+            font-weight: 500; /* Medium según el diseño */
+            color: #333;
+            transform: translateX(-50px); /* Mueve el menú 5 cm (50px) hacia la izquierda */
+        }
+
+        .menu-item {
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .menu-item:hover {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>SIGNARIO</div>
+        <div class="menu">
+            <span class="menu-item">Biblioteca</span>
+            <span class="menu-item">Traductor</span>
+            <span class="menu-item">Nosotros</span>
+        </div>
+    </div>
+</body>
+</html>
