@@ -1,0 +1,10 @@
+Signario
+Signario es un sistema web innovador diseñado para facilitar el aprendizaje y la práctica del lenguaje de señas. Este proyecto combina tecnología de procesamiento de imágenes en tiempo real con una interfaz amigable para crear una experiencia interactiva, educativa e inclusiva.
+
+Descripción General
+El objetivo de Signario es ofrecer un entorno accesible donde los usuarios puedan:
+
+Aprender lenguaje de señas mediante una biblioteca interactiva.
+Interactuar con un avatar que interpreta texto escrito en señas.
+Utilizar una cámara para realizar señas que son detectadas y convertidas en texto por el sistema.
+Este proyecto está pensado para ser utilizado por educadores, estudiantes y cualquier persona interesada en el aprendizaje y uso del lenguaje de señas.
