@@ -4,257 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca</title>
-    <style>
-        :root {
-            --footer-offset: 70px;
-            --translator-spacing: 80px;
-        }
-
-        body, html {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            height: 100%;
-            overflow-x: hidden;
-        }
-
-        .header {
-            background-color: #D9EAF5;
-            width: 100%;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            font-size: 16px;
-            font-weight: bold;
-            color: #000;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-        }
-
-        .menu {
-            display: flex;
-            gap: 40px;
-            font-family: Arial, sans-serif;
-            font-size: 15px;
-            font-weight: 500;
-            color: #333;
-            transform: translateX(-50px);
-        }
-
-        .menu-item {
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .menu-item:hover {
-            color: #000;
-        }
-
-        .left-content {
-            margin-top: 80px;
-            margin-left: 180px;
-            font-family: Arial, sans-serif;
-            font-size: 10px;
-            font-weight: bold;
-            color: #000;
-        }
-
-        .left-content p {
-            font-size: 14px;
-            font-weight: normal;
-            color: #555;
-        }
-
-        .container {
-            display: flex;
-            gap: 20px;
-            margin-top: 20px;
-            justify-content: flex-start;
-        }
-
-        .vertical-container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .blue-box {
-            width: 90px;
-            height: 115px;
-            background-color: #8FE3FF;
-            border-radius: 25px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border: 2px solid #FFFFFF;
-            position: relative;
-            text-align: center;
-        }
-
-        .blue-box-2 {
-            background-color: #53D4FF;
-        }
-
-        .blue-box-3 {
-            background-color: #0CB7F2;
-        }
-
-        .box-image {
-            width: 50px;
-            height: 50px;
-            margin-top: 20px;
-        }
-
-        .box-text {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 12px;
-            font-family: Arial, sans-serif;
-            color: #000;
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            padding: 20px;
-            border: 2px solid #ccc;
-            border-radius: 10px;
-            background-color: transparent;
-            width: 45%;
-            height: 400px;
-        }
-
-        .translator {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 300px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 340px;
-            margin-bottom: var(--translator-spacing);
-        }
-
-        .translator label {
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-            font-weight: bold;
-            color: #000;
-            margin-bottom: 10px;
-        }
-
-        .translator input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            font-size: 14px;
-            border: 2px solid #87CEEB;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        .translator button {
-            padding: 10px 20px;
-            font-size: 14px;
-            font-weight: bold;
-            color: #000;
-            background-color: #B0E0E6;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        }
-
-        .translator button:hover {
-            background-color: #87CEEB;
-        }
-
-        .footer {
-            width: 100%;
-            height: 200px;
-            background-color: #C5DEF6;
-            position: relative;
-            margin-top: var(--footer-offset);
-            padding: 0;
-            overflow: hidden;
-        }
-
-        .social-icons-container {
-            display: flex;
-            align-items: center;
-            position: absolute;
-            bottom: 30px;
-            left: 30px;
-        }
-
-        .social-icons {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-        }
-
-        .social-icons .line {
-            width: 100%;
-            height: 1px;
-            background-color: #A0BCCF;
-            margin-bottom: 5px;
-        }
-
-        .social-icons-icons {
-            display: flex;
-            flex-direction: row;
-            gap: 15px;
-        }
-
-        .social-icons-icons img {
-            width: 16px;
-            height: 16px;
-            transition: transform 0.3s ease;
-        }
-
-        .social-icons-icons img:hover {
-            transform: scale(1.2);
-        }
-
-        .vertical-line {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin-left: 20px;
-            height: 140px;
-            position: relative;
-        }
-
-        .vertical-line::before {
-            content: "";
-            width: 1px;
-            height: 90%;
-            background-color: #A0BCCF;
-            position: absolute;
-            top: -25px;
-        }
-
-        .vertical-line .circle {
-            width: 12px;
-            height: 12px;
-            background-color: #A0BCCF;
-            border-radius: 50%;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-    </style>
+    <link rel="stylesheet" href="/static/css/Biblioteca.css">
 </head>
 <body>
     <div class="header">
         <div>SIGNARIO</div>
         <div class="menu">
-            <span class="menu-item">Biblioteca</span>
-            <span class="menu-item">Traductor</span>
-            <span class="menu-item">Nosotros</span>
+            <span class="menu-item"><a href="/biblioteca" class="menu-link" aria-label="Ir a Biblioteca">Biblioteca</a></span>
+            <span class="menu-item"><a href="/camara" class="menu-link" aria-label="Ir a Traductor">Traductor</a></span>
+            <span class="menu-item"><a href="/nosotros" class="menu-link" aria-label="Ir a Nosotros">Nosotros</a></span>
         </div>
     </div>
     <div class="left-content">
@@ -263,15 +21,15 @@
         <div class="container">
             <div class="vertical-container">
                 <div class="blue-box">
-                    <img src="images/alfabeto.png" alt="Alfabeto" class="box-image">
+                    <img src="/static/images/alfabeto.png" alt="Alfabeto" class="box-image">
                     <div class="box-text">Alfabeto</div>
                 </div>
                 <div class="blue-box blue-box-2">
-                    <img src="images/numero.png" alt="Números" class="box-image">
+                    <img src="/static/images/numero.png" alt="Números" class="box-image">
                     <div class="box-text">Números</div>
                 </div>
                 <div class="blue-box blue-box-3">
-                    <img src="images/saludo.png" alt="Saludos" class="box-image">
+                    <img src="/static/images/saludo.png" alt="Saludos" class="box-image">
                     <div class="box-text">Saludos</div>
                 </div>
             </div>
@@ -284,20 +42,7 @@
         </div>
     </div>
     <div class="footer">
-        <div class="social-icons-container">
-            <div class="social-icons">
-                <div class="line"></div>
-                <div class="social-icons-icons">
-                    <img src="images/facebook.png" alt="Facebook">
-                    <img src="images/instagram.png" alt="Instagram">
-                    <img src="images/linkedin.png" alt="LinkedIn">
-                    <img src="images/twitter.png" alt="Twitter">
-                </div>
-            </div>
-            <div class="vertical-line">
-                <div class="circle"></div>
-            </div>
-        </div>
+        
     </div>
 </body>
 </html>
